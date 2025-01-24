@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3914531347681839812}
   - component: {fileID: 410720245184249580}
   - component: {fileID: 2563777428075286624}
+  - component: {fileID: 7485535165273686542}
   m_Layer: 0
   m_Name: '[BuildingBlock] Virtual Keyboard'
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: bac08eda-400f-4f61-8842-77e7699e068d
-  instanceId: 752186f9-14f5-40fb-bbb0-f9c4026155c7
+  instanceId: 0c397dbd-d08f-4145-9a98-bde3c409eae9
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -95,3 +96,17 @@ MonoBehaviour:
   KeyboardHiddenEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7485535165273686542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814897010385681362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 421ce5557759adf47b4a001cba48e992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PositionFix: {x: -0.15, y: -1.48, z: 0.26}
+  RotationFix: {x: 30, y: -30, z: 0}

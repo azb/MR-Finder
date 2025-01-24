@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectToPointAt: {fileID: 0}
+  verticalOffset: -0.3
 --- !u!1001 &3926996150314177416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88,15 +89,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 87cd21e0ee9dbb646803b39d4854c939, type: 3}
       propertyPath: m_LocalScale.x
-      value: 36.359997
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87cd21e0ee9dbb646803b39d4854c939, type: 3}
       propertyPath: m_LocalScale.y
-      value: 36.359993
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87cd21e0ee9dbb646803b39d4854c939, type: 3}
       propertyPath: m_LocalScale.z
-      value: 36.359993
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87cd21e0ee9dbb646803b39d4854c939, type: 3}
       propertyPath: m_LocalPosition.x

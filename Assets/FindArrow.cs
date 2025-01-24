@@ -15,8 +15,7 @@ public class FindArrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Camera.main.transform.position + new Vector3( Camera.main.transform.forward.x * .3f, -.2f, Camera.main.transform.forward.z * .3f);
-
+        
         if (objectToPointAt != null)
         {
             transform.LookAt(objectToPointAt);

@@ -76,11 +76,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b333c5b62b7f4e348a9209457a3985dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
-  StartUI: {fileID: 0}
-  FindUI: {fileID: 0}
-  SetupUI: {fileID: 0}
-  DeleteUI: {fileID: 0}
+  state: 1
+  StartUI: {fileID: 6698380310497991875}
+  FindUI: {fileID: 8469796448075613873}
+  AddItemUI: {fileID: 4273798969414894000}
+  DeleteUI: {fileID: 7938299900236180499}
+  VirtualKeyboard: {fileID: 0}
 --- !u!1001 &2816852485622184693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,7 +93,7 @@ PrefabInstance:
     - target: {fileID: 4371152544669491594, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
       propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 6698380310497991875}
+      objectReference: {fileID: 6039133127086565382}
     - target: {fileID: 5953119443667532868, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
       propertyPath: m_Name
       value: FindUI
@@ -214,6 +215,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2751065076975016632, guid: 0dc11a4769431d645914a41bf94940a9, type: 3}
   m_PrefabInstance: {fileID: 3752763619593392836}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7938299900236180499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6502915366048972503, guid: 0dc11a4769431d645914a41bf94940a9, type: 3}
+  m_PrefabInstance: {fileID: 3752763619593392836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4556162009055141859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,7 +230,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 321207692552789587, guid: b31bf722a0e6ec34b980fbc8395dae42, type: 3}
       propertyPath: m_Name
-      value: SetupUI
+      value: AddItemUI
       objectReference: {fileID: 0}
     - target: {fileID: 5567243854966513869, guid: b31bf722a0e6ec34b980fbc8395dae42, type: 3}
       propertyPath: m_LocalPosition.x
@@ -290,9 +296,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1754443161139264677}
     m_Modifications:
     - target: {fileID: 177520303116405036, guid: 932253aed200b824497075e8bf3e06b3, type: 3}
-      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: _whenSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4273798969414894000}
+      objectReference: {fileID: 6039133127086565382}
     - target: {fileID: 1513912099261308966, guid: 932253aed200b824497075e8bf3e06b3, type: 3}
       propertyPath: m_Name
       value: StartUI
@@ -370,9 +376,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8040590470943438925, guid: 932253aed200b824497075e8bf3e06b3, type: 3}
-      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8469796448075613873}
+      objectReference: {fileID: 6039133127086565382}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

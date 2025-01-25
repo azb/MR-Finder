@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class MRFinderUI : MonoBehaviour
 {
-    public enum State { LogoAnimation, StartUI, FindUI, SetupUI, DeleteUI };
+    public enum State { LogoAnimation, StartUI, FindUI, AddItemUI, DeleteUI };
     
     public State state = State.LogoAnimation;
 
     public GameObject StartUI;
     public GameObject FindUI;
-    public GameObject SetupUI;
+    public GameObject AddItemUI;
     public GameObject DeleteUI;
+    public GameObject VirtualKeyboard;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +21,40 @@ public class MRFinderUI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void UpdateState()
     {
-        
+        StartUI.SetActive(state == State.StartUI);
+        FindUI.SetActive(state == State.FindUI);
+        AddItemUI.SetActive(state == State.AddItemUI);
+        DeleteUI.SetActive(state == State.DeleteUI);
+        VirtualKeyboard.SetActive(state == State.FindUI || state == State.AddItemUI);
+
+    }
+
+    public void GoToStartUI()
+    {
+        this.state = State.StartUI;
+        UpdateState();
+    }
+    public void GoToFindUI()
+    {
+        this.state = State.FindUI;
+        UpdateState();
+    }
+
+    public void GoToAddItemUI()
+    {
+        this.state = State.AddItemUI;
+        UpdateState();
+    }
+    public void GoToDeleteUI()
+    {
+        this.state = State.DeleteUI;
+        UpdateState();
+    }
+
+    public void KeyboardCommitText(string text)
+    {
+
     }
 }

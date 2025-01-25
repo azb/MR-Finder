@@ -46,11 +46,22 @@ public class ButtonFilter : MonoBehaviour
         }
     }
 
+    public string GetNthButtonName(int n)
+    {
+        TMP_Text nameText = childList[n].GetComponentInChildren<TMP_Text>();
+        string name = nameText.text;
+        return name;
+    }
+
     // 当输入框内容变化时调用 (Called when the text in the InputField changes)
     private void OnInputValueChanged(string input)
     {
+        PopulateChildList();
+
         Debug.Log("input = " + input);
         // 遍历子物体列表，筛选显示或隐藏 (Iterate through the child list to show or hide objects)
+        
+        
         foreach (Transform child in childList)
         {
             // 获取子物体下的 TMP_Text 组件 (Get the TMP_Text component under the child object)

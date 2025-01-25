@@ -6,9 +6,10 @@ public class MRFinderUI : MonoBehaviour
 {
     public static MRFinderUI Instance;
 
-    public enum State {
-        LogoAnimation, Viewing, StartUI, 
-        FindUI, AddItemUI, DeleteUI, 
+    public enum State
+    {
+        LogoAnimation, Viewing, StartUI,
+        FindUI, AddItemUI, DeleteUI,
         MovingItem, EditItemUI, RenameItemUI,
         CompassUI
     };
@@ -38,9 +39,12 @@ public class MRFinderUI : MonoBehaviour
 
     public GameObject ItemPrefab;
 
+    ButtonFilter buttonFilter;
+
     private void Awake()
     {
         Instance = this;
+        buttonFilter = FindObjectOfType<ButtonFilter>();
     }
 
     // Start is called before the first frame update
@@ -94,8 +98,8 @@ public class MRFinderUI : MonoBehaviour
     public void GoToAddItemUI()
     {
         GameObject newObj = Instantiate(
-            ItemPrefab, 
-            Camera.main.transform.position + Camera.main.transform.forward * .5f, 
+            ItemPrefab,
+            Camera.main.transform.position + Camera.main.transform.forward * .5f,
             Quaternion.identity
         );
 
@@ -144,7 +148,7 @@ public class MRFinderUI : MonoBehaviour
 
     public void KeyboardCommitText(string text)
     {
-        Debug.Log("Committing text: "+text);
+        Debug.Log("Committing text: " + text);
         if (state == State.RenameItemUI || state == State.AddItemUI)
         {
             if (selectedItem != null)
@@ -159,23 +163,29 @@ public class MRFinderUI : MonoBehaviour
         }
         else
         {
-        if (state == State.FindUI)
+            if (state == State.FindUI)
             {
-                GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
-                for(int i = 0 ; i < items.Length ; i++)
-                {
-                    if (items[i].name.ToLower().Contains(text.ToLower()))
-                    {
-                        arrow.objectToPointAt = items[i].transform;
-                    }
-                }
-                UpdateStateDelayed(State.CompassUI);
+                PointArrowAtFirstMatch(text);
             }
-        else
+            else
             {
                 Debug.Log("Not in state for renaming! state = " + state);
             }
         }
+    }
+
+    void PointArrowAtFirstMatch(string query)
+    {
+        GameObject[] items = GameObject.FindGameObjectsWithTag("Item");
+        for (int i = 0; i < items.Length; i++)
+        {
+            if (items[i].name.ToLower().Contains(query.ToLower()))
+            {
+                arrow.objectToPointAt = items[i].transform;
+            }
+        }
+
+        UpdateStateDelayed(State.CompassUI);
     }
 
     public void OnGrabItem()
@@ -184,13 +194,19 @@ public class MRFinderUI : MonoBehaviour
         lastState = state;
         state = State.MovingItem;
         UpdateState();
-    }   
-    
+    }
+
     public void OnReleaseItem()
     {
-        Debug.Log("OnReleaseItem lastState = "+ lastState);
+        Debug.Log("OnReleaseItem lastState = " + lastState);
         //state = lastState;
         UpdateStateDelayed(lastState);
     }
 
+    public void OnSearchTileSelected(int tileID)
+    {
+        string name = buttonFilter.GetNthButtonName(tileID);
+        Debug.Log("Selected the search tile ID: " + tileID + " with name " + name);
+        PointArrowAtFirstMatch(name);
+    }
 }

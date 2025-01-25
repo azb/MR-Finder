@@ -28,6 +28,28 @@ public class ButtonFilter : MonoBehaviour
         {
             childList.Add(child); // ��ÿ�����������ӵ��б��� (Add each child to the list)
         }
+
+        foreach (Transform child in childList)
+        {
+            // ��ȡ�������µ� TMP_Text ��� (Get the TMP_Text component under the child object)
+            TMP_Text nameText = child.GetComponentInChildren<TMP_Text>();
+
+            if (nameText != null)
+            {
+                // ������ְ�����������֣�����ʾ�����壬��������
+                // (Show the child object if its name contains the input text, otherwise hide it)
+                if (nameText.text.ToLower().Contains(VRKeyboard.Instance.keyboardString.ToLower())) // ���Դ�Сд (Case-insensitive)
+                {
+                    child.gameObject.SetActive(true); // ��ʾ������ (Show the child object)
+                }
+                else
+                {
+                    child.gameObject.SetActive(false); // ���������� (Hide the child object)
+                }
+            }
+        }
+
+        Debug.Log("childList.Count = "+ childList.Count);
     }
 
     public string GetNthButtonName(int n)
@@ -45,26 +67,6 @@ public class ButtonFilter : MonoBehaviour
         Debug.Log("input = " + input);
         // �����������б���ɸѡ��ʾ������ (Iterate through the child list to show or hide objects)
         
-        
-        foreach (Transform child in childList)
-        {
-            // ��ȡ�������µ� TMP_Text ��� (Get the TMP_Text component under the child object)
-            TMP_Text nameText = child.GetComponentInChildren<TMP_Text>();
-
-            if (nameText != null)
-            {
-                // ������ְ�����������֣�����ʾ�����壬��������
-                // (Show the child object if its name contains the input text, otherwise hide it)
-                if (nameText.text.ToLower().Contains(input.ToLower())) // ���Դ�Сд (Case-insensitive)
-                {
-                    child.gameObject.SetActive(true); // ��ʾ������ (Show the child object)
-                }
-                else
-                {
-                    child.gameObject.SetActive(false); // ���������� (Hide the child object)
-                }
-            }
-        }
     }
 
     private void OnDestroy()

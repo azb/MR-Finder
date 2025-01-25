@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2563777428075286624}
   - component: {fileID: 7485535165273686542}
   - component: {fileID: 6426326206061714238}
+  - component: {fileID: 6464456976641674255}
   m_Layer: 0
   m_Name: '[BuildingBlock] Virtual Keyboard'
   m_TagString: Untagged
@@ -60,14 +61,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4814897010385681362}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09cced76cc649e444abf5f01db84a585, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InitialPosition: 1
   textCommitField: {fileID: 0}
-  textHandler: {fileID: 0}
+  textHandler: {fileID: 6464456976641674255}
   leftControllerRootTransform: {fileID: 0}
   leftControllerDirectTransform: {fileID: 0}
   rightControllerRootTransform: {fileID: 0}
@@ -109,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421ce5557759adf47b4a001cba48e992, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PositionFix: {x: -0.15, y: -1.48, z: 0.26}
-  RotationFix: {x: 30, y: -30, z: 0}
+  PositionFix: {x: 0, y: -1.48, z: 0.26}
+  RotationFix: {x: 30, y: 0, z: 0}
 --- !u!114 &6426326206061714238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,3 +124,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0635d1bb4b6b9da4696a458b56ab0f26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inputFieldToKeyboard: {fileID: 0}
+  text: 
+--- !u!114 &6464456976641674255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4814897010385681362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb623c314fd69ef4b9c55ca02bbbb57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 0}

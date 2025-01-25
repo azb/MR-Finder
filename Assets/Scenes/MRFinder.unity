@@ -146,8 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   StartUI: {fileID: 1327953149}
-  FindUI: {fileID: 2026945354}
-  CompassUI: {fileID: 0}
+  FindUI: {fileID: 0}
+  CompassUI: {fileID: 2026945354}
   AddItemUI: {fileID: 1500718736}
   DeleteUI: {fileID: 302365402}
   VirtualKeyboard: {fileID: 0}

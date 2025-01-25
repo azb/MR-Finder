@@ -5,51 +5,45 @@ using TMPro;
 
 public class ButtonFilter : MonoBehaviour
 {
-    public InputField inputField; // ï¿½ï¿½ï¿½ï¿½ï¿½ (InputField for text input)
-    public Transform content; // Content ï¿½ï¿½ï¿½ï¿½ (Parent object containing all child items)
+    public InputField inputField; // ÊäÈë¿ò (InputField for text input)
+    public Transform content; // Content ¶ÔÏó (Parent object containing all child items)
 
-    private List<Transform> childList = new List<Transform>(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½ (List of child objects)
+    private List<Transform> childList = new List<Transform>(); // ×ÓÎïÌåÁĞ±í (List of child objects)
 
     private void Start()
     {
-        // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½ (Initialize the child object list)
+        // ³õÊ¼»¯×ÓÎïÌåÁĞ±í (Initialize the child object list)
         PopulateChildList();
 
-        // ï¿½ï¿½ï¿½ï¿½ InputField ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ä»¯ï¿½Â¼ï¿½ (Listen to text changes in the InputField)
+        // ¼àÌı InputField µÄÎÄ×Ö±ä»¯ÊÂ¼ş (Listen to text changes in the InputField)
         inputField.onValueChanged.AddListener(OnInputValueChanged);
     }
 
-    // ï¿½ï¿½ï¿½ï¿½ Content ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½Óµï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ (Populate the list with Content's children)
+    // ±éÀú Content µÄ×ÓÎïÌå£¬Ìí¼Óµ½ÁĞ±íÖĞ (Populate the list with Content's children)
     private void PopulateChildList()
     {
-        childList.Clear(); // ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½ (Clear the list)
+        Item[] items = FindObjectsOfType<Item>();
 
+        childList.Clear(); // Çå¿ÕÁĞ±í (Clear the list)
+
+        Debug.Log("items.Length = " + items.Length);
+
+        int currentItem = 0;
         foreach (Transform child in content)
         {
-            childList.Add(child); // ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½ï¿½Ğ±ï¿½ï¿½ï¿½ (Add each child to the list)
-        }
+            childList.Add(child); // ½«Ã¿¸ö×ÓÎïÌåÌí¼Óµ½ÁĞ±íÖĞ (Add each child to the list)
 
-        foreach (Transform child in childList)
-        {
-            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½ TMP_Text ï¿½ï¿½ï¿½ (Get the TMP_Text component under the child object)
+            child.gameObject.SetActive(currentItem < items.Length);
+
             TMP_Text nameText = child.GetComponentInChildren<TMP_Text>();
 
-            if (nameText != null)
+            if (currentItem < items.Length)
             {
-                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-                // (Show the child object if its name contains the input text, otherwise hide it)
-                if (nameText.text.ToLower().Contains(VRKeyboard.Instance.keyboardString.ToLower())) // ï¿½ï¿½ï¿½Ô´ï¿½Ğ¡Ğ´ (Case-insensitive)
-                {
-                    child.gameObject.SetActive(true); // ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Show the child object)
-                }
-                else
-                {
-                    child.gameObject.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Hide the child object)
-                }
+                Debug.Log("Adding item "+items[currentItem].gameObject.name);
+                nameText.text = items[currentItem].gameObject.name;
             }
+            currentItem++;
         }
-
-        Debug.Log("childList.Count = "+ childList.Count);
     }
 
     public string GetNthButtonName(int n)
@@ -59,19 +53,39 @@ public class ButtonFilter : MonoBehaviour
         return name;
     }
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ±ä»¯Ê±ï¿½ï¿½ï¿½ï¿½ (Called when the text in the InputField changes)
+    // µ±ÊäÈë¿òÄÚÈİ±ä»¯Ê±µ÷ÓÃ (Called when the text in the InputField changes)
     private void OnInputValueChanged(string input)
     {
         PopulateChildList();
 
         Debug.Log("input = " + input);
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ğ±ï¿½ï¿½ï¿½É¸Ñ¡ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (Iterate through the child list to show or hide objects)
+        // ±éÀú×ÓÎïÌåÁĞ±í£¬É¸Ñ¡ÏÔÊ¾»òÒş²Ø (Iterate through the child list to show or hide objects)
         
+        
+        foreach (Transform child in childList)
+        {
+            // »ñÈ¡×ÓÎïÌåÏÂµÄ TMP_Text ×é¼ş (Get the TMP_Text component under the child object)
+            TMP_Text nameText = child.GetComponentInChildren<TMP_Text>();
+
+            if (nameText != null)
+            {
+                // Èç¹ûÃû×Ö°üº¬ÊäÈëµÄÎÄ×Ö£¬ÔòÏÔÊ¾×ÓÎïÌå£¬·ñÔòÒş²Ø
+                // (Show the child object if its name contains the input text, otherwise hide it)
+                if (nameText.text.ToLower().Contains(input.ToLower())) // ºöÂÔ´óĞ¡Ğ´ (Case-insensitive)
+                {
+                    child.gameObject.SetActive(true); // ÏÔÊ¾×ÓÎïÌå (Show the child object)
+                }
+                else
+                {
+                    child.gameObject.SetActive(false); // Òş²Ø×ÓÎïÌå (Hide the child object)
+                }
+            }
+        }
     }
 
     private void OnDestroy()
     {
-        // ï¿½Æ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½Ğ¹Â© (Remove the listener to avoid memory leaks)
+        // ÒÆ³ı¼àÌıÆ÷£¬±ÜÃâÄÚ´æĞ¹Â© (Remove the listener to avoid memory leaks)
         inputField.onValueChanged.RemoveListener(OnInputValueChanged);
     }
 }

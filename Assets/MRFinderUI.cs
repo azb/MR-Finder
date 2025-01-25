@@ -29,7 +29,7 @@ public class MRFinderUI : MonoBehaviour
         CompassUI.SetActive(state == State.CompassUI);
         AddItemUI.SetActive(state == State.AddItemUI);
         DeleteUI.SetActive(state == State.DeleteUI);
-        VirtualKeyboard.SetActive(state == State.FindUI || state == State.AddItemUI);
+        //VirtualKeyboard.SetActive(state == State.FindUI || state == State.AddItemUI);
 
     }
 

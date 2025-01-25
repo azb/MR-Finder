@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class MRFinderUI : MonoBehaviour
 {
-    public enum State { LogoAnimation, StartUI, FindUI, AddItemUI, DeleteUI };
+    public enum State { LogoAnimation, StartUI, FindUI, CompassUI, AddItemUI, DeleteUI };
     
     public State state = State.LogoAnimation;
 
     public GameObject StartUI;
     public GameObject FindUI;
+    public GameObject CompassUI;
     public GameObject AddItemUI;
     public GameObject DeleteUI;
     public GameObject VirtualKeyboard;
@@ -25,6 +26,7 @@ public class MRFinderUI : MonoBehaviour
     {
         StartUI.SetActive(state == State.StartUI);
         FindUI.SetActive(state == State.FindUI);
+        CompassUI.SetActive(state == State.CompassUI);
         AddItemUI.SetActive(state == State.AddItemUI);
         DeleteUI.SetActive(state == State.DeleteUI);
         VirtualKeyboard.SetActive(state == State.FindUI || state == State.AddItemUI);
@@ -39,6 +41,12 @@ public class MRFinderUI : MonoBehaviour
     public void GoToFindUI()
     {
         this.state = State.FindUI;
+        UpdateState();
+    }
+
+    public void GoToCompassUI()
+    {
+        this.state = State.CompassUI;
         UpdateState();
     }
 

@@ -1,3 +1,4 @@
+using Meta.Voice.Samples.Dictation;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,6 +16,13 @@ public class VRKeyboard : MonoBehaviour
     public bool capslock = false;
 
     KeyboardKey[] allKeys;
+
+    bool isListeningVoice = false;
+
+    public GameObject KeyboardCanvas;
+    public GameObject VoiceCanvas;
+
+    DictationActivation da;
 
     // Start is called before the first frame update
     void Awake()
@@ -49,6 +57,19 @@ public class VRKeyboard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        inputText.text = keyboardString + cursor;
+        if (!this.isListeningVoice)
+        {
+            inputText.text = keyboardString + cursor;
+        }
+    }
+
+    public void ToggleListening()
+    {
+        isListeningVoice = !isListeningVoice;
+
+        KeyboardCanvas.SetActive(!isListeningVoice);
+        VoiceCanvas.SetActive(isListeningVoice);
+
+        da.ToggleActivation();
     }
 }

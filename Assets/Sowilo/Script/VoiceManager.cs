@@ -12,7 +12,8 @@ public class VoiceManager : MonoBehaviour
     [SerializeField] private AppVoiceExperience appVoiceExperience;
     [SerializeField] private WitResponseMatcher responseMatcher;
     //[SerializeField] private TextMeshProUGUI transcriptionText;
-    [SerializeField] private InputField transcriptionText;
+    //[SerializeField] private InputField transcriptionText;
+    [SerializeField] private Text transcriptionText;
 
     [Header("Voice Events")]
     //[SerializeField] private AmazonBedrockConnection amazonBedrockConnection;

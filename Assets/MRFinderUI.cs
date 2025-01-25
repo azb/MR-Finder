@@ -93,21 +93,29 @@ public class MRFinderUI : MonoBehaviour
 
     public void GoToAddItemUI()
     {
-        GameObject newObj = Instantiate(ItemPrefab, Camera.main.transform.position + Camera.main.transform.forward, Quaternion.identity);
+        GameObject newObj = Instantiate(
+            ItemPrefab, 
+            Camera.main.transform.position + Camera.main.transform.forward * .5f, 
+            Quaternion.identity
+        );
+
         this.selectedItem = newObj.GetComponent<Item>();
         Debug.Log("GoToAddItemUI");
         UpdateStateDelayed(State.AddItemUI);
     }
+
     public void GoToDeleteUI()
     {
         Debug.Log("GoToDeleteUI");
         UpdateStateDelayed(State.DeleteUI);
     }
+
     public void GoToEditItemUI()
     {
         Debug.Log("GoToEditItemUI");
         UpdateStateDelayed(State.EditItemUI);
     }
+
     public void GoToRenameItemUI()
     {
         Debug.Log("GoToRenameItemUI");

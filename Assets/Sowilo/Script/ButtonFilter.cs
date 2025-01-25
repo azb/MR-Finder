@@ -22,17 +22,34 @@ public class ButtonFilter : MonoBehaviour
     // 遍历 Content 的子物体，添加到列表中 (Populate the list with Content's children)
     private void PopulateChildList()
     {
+        Item[] items = FindObjectsOfType<Item>();
+
         childList.Clear(); // 清空列表 (Clear the list)
 
+        Debug.Log("items.Length = " + items.Length);
+
+        int currentItem = 0;
         foreach (Transform child in content)
         {
             childList.Add(child); // 将每个子物体添加到列表中 (Add each child to the list)
+
+            child.gameObject.SetActive(currentItem < items.Length);
+
+            TMP_Text nameText = child.GetComponentInChildren<TMP_Text>();
+
+            if (currentItem < items.Length)
+            {
+                Debug.Log("Adding item "+items[currentItem].gameObject.name);
+                nameText.text = items[currentItem].gameObject.name;
+            }
+            currentItem++;
         }
     }
 
     // 当输入框内容变化时调用 (Called when the text in the InputField changes)
     private void OnInputValueChanged(string input)
     {
+        Debug.Log("input = " + input);
         // 遍历子物体列表，筛选显示或隐藏 (Iterate through the child list to show or hide objects)
         foreach (Transform child in childList)
         {

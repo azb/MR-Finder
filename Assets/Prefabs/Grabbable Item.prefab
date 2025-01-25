@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 8113193288063975202}
   m_Layer: 0
   m_Name: Grabbable Item
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: 7358e191-33b7-43ca-b066-b2f00531ac66
-  instanceId: 6efb95b4-4dcb-4c32-9673-3c076b0f6a64
+  instanceId: 7ed9011e-1042-4857-af75-c244259e37dd
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: 
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blockId: f8766c17-aaf8-4b55-9431-de8deea83842
-  instanceId: 64ebf965-0542-47e6-b353-3f273092aca6
+  instanceId: dacc09ab-8b60-4c3d-baf0-f91d80b68bdd
   version: 1
   installationRoutineCheckpoint:
     _installationRoutineId: f8338144-8280-4ff6-9455-ae2bb9c20fe8

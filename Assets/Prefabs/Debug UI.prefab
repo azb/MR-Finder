@@ -5620,6 +5620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b333c5b62b7f4e348a9209457a3985dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  findArrow: {fileID: 2929800409256933321}
   state: 1
   lastState: 1
   StartUI: {fileID: 5739693307888901183}
@@ -5630,9 +5631,9 @@ MonoBehaviour:
   RenameItemUI: {fileID: 751881541592333054}
   ViewingUI: {fileID: 1742939476300232028}
   CompassUI: {fileID: 6454593603747656482}
-  MenuButtonUI: {fileID: 0}
+  MenuButtonUI: {fileID: 979374552059666966}
   VirtualKeyboard: {fileID: 3598025443782611908}
-  arrow: {fileID: 0}
+  arrow: {fileID: 2929800409256933321}
   selectedItem: {fileID: 0}
   ItemPrefab: {fileID: 4529315506852587329, guid: 0e0dcfbfdbc483e4fa1d1a6af36cea3d, type: 3}
 --- !u!114 &6156167809815547492
@@ -6838,7 +6839,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8340182413272429822, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9108883233341595893, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
       insertIndex: -1
@@ -7039,6 +7041,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
+--- !u!114 &2929800409256933321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2568834970129316015, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}
+  m_PrefabInstance: {fileID: 796829513884700518}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439c19237907e1f43aabb247dfcc8e9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6454593603747656482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5953119443667532868, guid: 5bb5e71c96f348e429c02cebd987c9be, type: 3}

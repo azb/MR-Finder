@@ -34,7 +34,6 @@ public class Item : MonoBehaviour
     public void OnRelease()
     {
         mrFinderUI.OnReleaseItem();
-        mrFinderUI.state = MRFinderUI.State.EditItemUI;
     }
 
     public void OnLabelPressed()

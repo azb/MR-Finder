@@ -27,6 +27,7 @@ public class VRKeyboard : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        da = FindObjectOfType< DictationActivation >();
         Instance = this;
         Invoke("ToggleCursor", .5f);
     }
@@ -70,6 +71,7 @@ public class VRKeyboard : MonoBehaviour
         KeyboardCanvas.SetActive(!isListeningVoice);
         VoiceCanvas.SetActive(isListeningVoice);
 
+        da = FindObjectOfType<DictationActivation>();
         da.ToggleActivation();
     }
 }

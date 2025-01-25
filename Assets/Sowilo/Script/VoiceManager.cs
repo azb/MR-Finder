@@ -71,5 +71,6 @@ public class VoiceManager : MonoBehaviour
         _voiceCommandReady = false;
         //amazonBedrockConnection.SendPrompt(transcription);
         completeTranscription?.Invoke(transcription);
+        Debug.Log(transcription);
     }
 }

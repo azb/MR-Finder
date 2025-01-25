@@ -41,11 +41,11 @@ public class Item : MonoBehaviour
     {
         if (mrFinderUI.state == MRFinderUI.State.EditItemUI)
         {
-            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.EditItemUI);
+            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.Viewing);
         }
         else
         {
-            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.Viewing);
+            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.EditItemUI);
         }
     }
 

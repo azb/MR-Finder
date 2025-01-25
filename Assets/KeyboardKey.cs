@@ -35,7 +35,14 @@ public class KeyboardKey : MonoBehaviour
         else
         if (name.Contains("enter"))
         {
-            MRFinderUI.Instance.selectedItem.gameObject.name = VRKeyboard.Instance.keyboardString;
+            MRFinderUI.Instance.KeyboardCommitText(VRKeyboard.Instance.keyboardString);
+
+            //if (MRFinderUI.Instance.selectedItem != null)
+            //{
+            //    MRFinderUI.Instance.selectedItem.gameObject.name = VRKeyboard.Instance.keyboardString;
+            //    MRFinderUI.Instance.selectedItem = null;
+            //}
+
             MRFinderUI.Instance.UpdateStateDelayed(MRFinderUI.State.StartUI);
         }
         else

@@ -206,4 +206,12 @@ public class MRFinderUI : MonoBehaviour
         Debug.Log("Selected the search tile ID: " + tileID + " with name " + name);
         PointArrowAtFirstMatch(name);
     }
+
+    public void DeleteSelectedItem()
+    {
+        if (this.selectedItem != null)
+        {
+            Destroy(selectedItem.gameObject);
+        }
+    }
 }

@@ -107,19 +107,16 @@ public class MRFinderUI : MonoBehaviour
         Debug.Log("GoToAddItemUI");
         UpdateStateDelayed(State.AddItemUI);
     }
-
     public void GoToDeleteUI()
     {
         Debug.Log("GoToDeleteUI");
         UpdateStateDelayed(State.DeleteUI);
     }
-
     public void GoToEditItemUI()
     {
         Debug.Log("GoToEditItemUI");
         UpdateStateDelayed(State.EditItemUI);
     }
-
     public void GoToRenameItemUI()
     {
         Debug.Log("GoToRenameItemUI");

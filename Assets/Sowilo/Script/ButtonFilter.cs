@@ -10,6 +10,8 @@ public class ButtonFilter : MonoBehaviour
 
     private List<Transform> childList = new List<Transform>(); // 子物体列表 (List of child objects)
 
+    public Transform ItemSearchTilePrefab;
+
     private void Start()
     {
         // 初始化子物体列表 (Initialize the child object list)
@@ -19,6 +21,11 @@ public class ButtonFilter : MonoBehaviour
         inputField.onValueChanged.AddListener(OnInputValueChanged);
 
         Invoke("PopulateChildList",.01f);
+
+        for(int i = 0 ; i < 10 ; i++)
+        {
+            Instantiate(ItemSearchTilePrefab, content);
+        }
     }
 
     // 遍历 Content 的子物体，添加到列表中 (Populate the list with Content's children)

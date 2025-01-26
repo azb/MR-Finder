@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3966999756710766950}
   - component: {fileID: 4381920996218539018}
   - component: {fileID: 5717175088065897177}
+  - component: {fileID: 8072994783631287462}
   m_Layer: 0
   m_Name: Search  System
   m_TagString: Untagged
@@ -399,6 +400,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 4060962290696359402}
   content: {fileID: 1606772774563100811}
+--- !u!114 &8072994783631287462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14821103389138196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249b58834dab1e54d9a356a15e7bfd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &32820052233614358
 GameObject:
   m_ObjectHideFlags: 0
@@ -12266,7 +12279,19 @@ MonoBehaviour:
   m_Group: {fileID: 0}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8072994783631287462}
+        m_TargetAssemblyTypeName: ButtonRecord, Assembly-CSharp
+        m_MethodName: RecordSearchEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7835981307298378008}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 1
 --- !u!95 &2448730799655754106
 Animator:

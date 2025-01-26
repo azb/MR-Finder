@@ -1,0 +1,187 @@
+*****************************
+***********SYSTEM************
+*****************************
+Unity Version:2022.3.41f1
+OS:Windows 11  (10.0.22631) 64bit
+System Time: 1/26/2025 11:01:24 AM
+
+*****************************
+***********PROJECT***********
+*****************************
+Scripting Define Symbols: ISDK_OPENXR_HAND;C3D_OCULUS
+Packages:
+  com.cognitive3d.c3d-sdk 1.6.5
+  com.meta.xr.sdk.all 71.0.0
+  com.unity.collab-proxy 2.6.0
+  com.unity.feature.development 1.0.1
+  com.unity.textmeshpro 3.0.6
+  com.unity.timeline 1.7.6
+  com.unity.ugui 1.0.0
+  com.unity.visualscripting 1.9.4
+  com.unity.xr.management 4.5.0
+  com.unity.xr.oculus 4.2.0
+  com.unity.modules.ai 1.0.0
+  com.unity.modules.androidjni 1.0.0
+  com.unity.modules.animation 1.0.0
+  com.unity.modules.assetbundle 1.0.0
+  com.unity.modules.audio 1.0.0
+  com.unity.modules.cloth 1.0.0
+  com.unity.modules.director 1.0.0
+  com.unity.modules.imageconversion 1.0.0
+  com.unity.modules.imgui 1.0.0
+  com.unity.modules.jsonserialize 1.0.0
+  com.unity.modules.particlesystem 1.0.0
+  com.unity.modules.physics 1.0.0
+  com.unity.modules.physics2d 1.0.0
+  com.unity.modules.screencapture 1.0.0
+  com.unity.modules.terrain 1.0.0
+  com.unity.modules.terrainphysics 1.0.0
+  com.unity.modules.tilemap 1.0.0
+  com.unity.modules.ui 1.0.0
+  com.unity.modules.uielements 1.0.0
+  com.unity.modules.umbra 1.0.0
+  com.unity.modules.unityanalytics 1.0.0
+  com.unity.modules.unitywebrequest 1.0.0
+  com.unity.modules.unitywebrequestassetbundle 1.0.0
+  com.unity.modules.unitywebrequestaudio 1.0.0
+  com.unity.modules.unitywebrequesttexture 1.0.0
+  com.unity.modules.unitywebrequestwww 1.0.0
+  com.unity.modules.vehicles 1.0.0
+  com.unity.modules.video 1.0.0
+  com.unity.modules.vr 1.0.0
+  com.unity.modules.wind 1.0.0
+  com.unity.modules.xr 1.0.0
+SDK Version: 1.6.5
+Api Key: ****OA1H
+Developer Key: ****2UE6
+Enable Logging: True
+Enable Development Logging: False
+Gaze Type: Physics
+Snapshot Interval: 0.1
+Dynamic Object Search in Parent: True
+Dynamic Object Layer Mask: -1
+Track GPS Location: False
+GPS Accuracy: 2
+Record Floor Position: True
+Automatic Send Timer: 10
+Gaze Snapshot Batch Size: 256
+Event Snapshot Batch Size: 256
+Dynamic Snapshot Batch Size: 512
+Sensor Snapshot Batch Size: 512
+Fixation Snapshot Batch Size: 256
+Save Data to Local Cache if no internet connection: True
+Cache Size (bytes): 104857600
+Cache Size (mb): 100.0 MB
+Custom Protocol: https
+Custom Gateway: data.cognitive3d.com
+Custom Viewer: viewer.cognitive3d.com/scene/
+Custom Dashboard: app.cognitive3d.com
+Texture Export Quality: 2
+Export Lowest LOD from LODGroup Components: True
+Scene Settings:
+  └─MRFinder Arthurs Scene
+     ├─Scene Id: 
+     ├─Scene Path: Assets/Scenes/MRFinder Arthurs Scene.unity
+     ├─Last Revision: 
+     ├─Version Number: 0
+     └─Version Id: 0
+
+*****************************
+********CURRENT SCENE********
+*****************************
+Scene Name: MRFinder Arthurs Scene
+Scene Id: 
+Scene Path: Assets/Scenes/MRFinder Arthurs Scene.unity
+Last Revision: 
+Version Number: 0
+Version Id: 0
+Scene Size (mb): 15.73
+Main Camera GameObject: CenterEyeAnchor
+Manager Initialize On Start: True
+Manager Startup Delay Time (s): 0
+
+*****************************
+****CURRENT SCENE OBJECTS****
+*****************************
+Dynamic Object Count: 2
+  ├─RightHandAnchor
+  │  ├─Mesh Name: righthandanchor
+  │  ├─Has Collider: false
+  │  ├─Has Children: true
+  │  └─Has Child Colliders: false
+  └─LeftHandAnchor
+     ├─Mesh Name: lefthandanchor
+     ├─Has Collider: false
+     ├─Has Children: true
+     └─Has Child Colliders: false
+
+*****************************
+********EXPORT FOLDER********
+*****************************
+/Cognitive3D_SceneExplorerExport (16mb)
+   /MRFinder Arthurs Scene (15.73mb)
+      1180938966controller_r_lo_BaseColorMain.png (0.79mb)
+      122199232touchController_albedoMain.png (0.06mb)
+      1327411633controller_l_lo_NormalBump.png (1.71mb)
+      1363314364MetaQuestTouchPlus_Left_BaseColor_AO_AlphaRoughnessMain.png (1.35mb)
+      1639048993controller_r_lo_NormalBump.png (1.76mb)
+      1764223827MetaQuestTouchPlus_Right_BaseColor_AO_AlphaRoughnessMain.png (1.36mb)
+      1814534556RainbowGradientMain.png (0.03mb)
+      1923169716MetaQuestTouchPlus_NormalsBump.png (0.89mb)
+      2116372573Reticle-CircleMain.png (0.01mb)
+      2120440669OculusQuestTouchControllerTextureMain.png (0.26mb)
+      371857150-1410700296Main.png (0.01mb)
+      371857150466142Main.png (0.00mb)
+      371857150466308Main.png (0.00mb)
+      371857150466414Main.png (0.00mb)
+      371857150467012Main.png (0.00mb)
+      371857150467326Main.png (0.00mb)
+      371857150467926Main.png (0.00mb)
+      371857150468192Main.png (0.00mb)
+      371857150468936Main.png (0.00mb)
+      371857150469524Main.png (0.00mb)
+      371857150469862Main.png (0.00mb)
+      371857150470292Main.png (0.00mb)
+      371857150470872Main.png (0.00mb)
+      371857150471006Main.png (0.00mb)
+      371857150471514Main.png (0.00mb)
+      371857150472126Main.png (0.00mb)
+      371857150472424Main.png (0.00mb)
+      371857150472486Main.png (0.00mb)
+      371857150472620Main.png (0.00mb)
+      371857150472962Main.png (0.00mb)
+      371857150473002Main.png (0.00mb)
+      371857150474250Main.png (0.00mb)
+      371857150474334Main.png (0.00mb)
+      371857150474406Main.png (0.00mb)
+      371857150474534Main.png (0.00mb)
+      371857150474880Main.png (0.00mb)
+      371857150475202Main.png (0.00mb)
+      371857150475274Main.png (0.00mb)
+      371857150475414Main.png (0.00mb)
+      371857150477226Main.png (0.00mb)
+      371857150477428Main.png (0.00mb)
+      371857150477694Main.png (0.00mb)
+      371857150477914Main.png (0.00mb)
+      371857150477992Main.png (0.00mb)
+      371857150478306Main.png (0.00mb)
+      371857150478368Main.png (0.00mb)
+      371857150478964Main.png (0.00mb)
+      371857150479098Main.png (0.00mb)
+      371857150479880Main.png (0.00mb)
+      371857150480452Main.png (0.00mb)
+      371857150480518Main.png (0.00mb)
+      371857150481708Main.png (0.00mb)
+      371857150481772Main.png (0.00mb)
+      371857150482454Main.png (0.00mb)
+      371857150482528Main.png (0.00mb)
+      371857150482794Main.png (0.00mb)
+      371857150482952Main.png (0.00mb)
+      371857150483536Main.png (0.00mb)
+      371857150484668Main.png (0.00mb)
+      371857150484918Main.png (0.01mb)
+      479365944OculusTouchForQuest2_AlbedoRoughnessMain.png (0.24mb)
+      768432320controller_l_lo_BaseColorMain.png (0.79mb)
+      scene.bin (5.81mb)
+      scene.gltf (0.58mb)
+      settings.json (0.00mb)

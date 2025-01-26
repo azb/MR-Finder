@@ -142,8 +142,6 @@ PlayerSettings:
   bundleVersion: 0.1
   preloadedAssets:
   - {fileID: 11400000, guid: 47b415b469dadf54f8cfb4bc7b169217, type: 2}
-  - {fileID: 8599237474398031810, guid: f50939812b851004e9cbf26a9d1f6d37, type: 2}
-  - {fileID: 11400000, guid: ea301814f3c9cda4ca49bba0a3ec5368, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -747,7 +745,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: ISDK_OPENXR_HAND
+    Android: ISDK_OPENXR_HAND;C3D_OCULUS
     Standalone: ISDK_OPENXR_HAND
   additionalCompilerArguments: {}
   platformArchitecture: {}

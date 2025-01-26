@@ -60,6 +60,10 @@ public class ButtonFilter : MonoBehaviour
 
             if (nameText != null)
             {
+                Debug.Log("nameText = " + nameText);
+                Debug.Log("VRKeyboard.Instance = " + VRKeyboard.Instance);
+                Debug.Log("currentItem = " + currentItem);
+                Debug.Log("items = " + items);
                 // 如果名字包含输入的文字，则显示子物体，否则隐藏
                 // (Show the child object if its name contains the input text, otherwise hide it)
                 if (nameText.text.ToLower().Contains(VRKeyboard.Instance.keyboardString.ToLower())

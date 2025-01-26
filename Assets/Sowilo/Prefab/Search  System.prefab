@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4604715247508737712}
   - component: {fileID: 3966999756710766950}
   - component: {fileID: 4381920996218539018}
+  - component: {fileID: 5717175088065897177}
   m_Layer: 0
   m_Name: Search  System
   m_TagString: Untagged
@@ -384,6 +385,20 @@ MonoBehaviour:
   _whenUnselectedEmpty:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5717175088065897177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14821103389138196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3b23cc51715c148bbfb0065a097263, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputField: {fileID: 4060962290696359402}
+  content: {fileID: 1606772774563100811}
 --- !u!1 &32820052233614358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,6 +7308,7 @@ GameObject:
   - component: {fileID: 5851996048410065729}
   - component: {fileID: 7679681709361324779}
   - component: {fileID: 1181111450674869605}
+  - component: {fileID: 6743279548502154112}
   m_Layer: 0
   m_Name: TextTileButton_IconAndLabel_Regular (17)
   m_TagString: QDSUIToggleButton
@@ -7389,6 +7405,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6743279548502154112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827872237564320304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28990378c13471b4cb345dff4863b060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1852606452915285088
 GameObject:
   m_ObjectHideFlags: 0
@@ -35490,6 +35518,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e2f27e53cd0e4a4f88e7a1e693cb8ee, type: 3}
+--- !u!114 &4060962290696359402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3522723905942644618, guid: 8e2f27e53cd0e4a4f88e7a1e693cb8ee, type: 3}
+  m_PrefabInstance: {fileID: 628345699121654368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4620239819284830097 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5234931778180627953, guid: 8e2f27e53cd0e4a4f88e7a1e693cb8ee, type: 3}

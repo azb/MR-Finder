@@ -34,11 +34,23 @@ public class Item : MonoBehaviour
     public void OnRelease()
     {
         mrFinderUI.OnReleaseItem();
-        mrFinderUI.state = MRFinderUI.State.EditItemUI;
+    }
+
+    public void OnLabelPressed()
+    {
+        if (mrFinderUI.state == MRFinderUI.State.EditItemUI)
+        {
+            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.Viewing);
+        }
+        else
+        {
+            mrFinderUI.UpdateStateDelayed(MRFinderUI.State.EditItemUI);
+        }
     }
 
     public void SetName(string name)
     {
+        Debug.Log("Setting name to " + name);
         gameObject.name = name;
         label.text = name;
     }

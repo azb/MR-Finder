@@ -41,6 +41,11 @@ public class VRKeyboard : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        keyboardString = "";
+    }
+
     void ToggleCursor()
     {
         if (cursor == "|")

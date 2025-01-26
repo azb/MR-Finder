@@ -43,6 +43,11 @@ public class VRKeyboard : MonoBehaviour
 
     private void OnDisable()
     {
+        Invoke("ClearKeyboardString", .5f);
+    }
+
+    void ClearKeyboardString()
+    {
         keyboardString = "";
     }
 

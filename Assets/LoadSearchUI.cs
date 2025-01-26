@@ -5,9 +5,11 @@ using UnityEngine;
 public class LoadSearchUI : MonoBehaviour
 {
     public Vector3 PositionFix;
+    //public  MRFinderUI MRFinderUI;
     private void OnEnable()
     {
         PositionFresh();
+        //MRFinderUI.GoToFindUI();
     }
 
     void PositionFresh()

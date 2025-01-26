@@ -52,10 +52,12 @@ public class Item : MonoBehaviour
     {
         if (mrFinderUI.state == MRFinderUI.State.EditItemUI)
         {
+            mrFinderUI.selectedItem = null;
             mrFinderUI.UpdateStateDelayed(MRFinderUI.State.Viewing);
         }
         else
         {
+            mrFinderUI.selectedItem = this;
             mrFinderUI.UpdateStateDelayed(MRFinderUI.State.EditItemUI);
         }
     }

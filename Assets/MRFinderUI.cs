@@ -214,5 +214,6 @@ public class MRFinderUI : MonoBehaviour
         {
             Destroy(selectedItem.gameObject);
         }
+        UpdateStateDelayed(State.Viewing);
     }
 }

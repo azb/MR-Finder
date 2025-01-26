@@ -3928,6 +3928,7 @@ GameObject:
   - component: {fileID: 5206883635799153457}
   - component: {fileID: 5083810200899876525}
   - component: {fileID: 1599346092409456360}
+  - component: {fileID: 822590478060840666}
   m_Layer: 0
   m_Name: Persistent Menu Button Canvas
   m_TagString: Untagged
@@ -4018,6 +4019,21 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &822590478060840666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4023770741547153844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa58cca6d554f3e4999111b5505870be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToParentTo: {fileID: 0}
+  localPos: {x: 0, y: -0.05, z: 0.13}
+  localRot: {x: 270, y: 0, z: 180}
 --- !u!1 &4044898556439666912
 GameObject:
   m_ObjectHideFlags: 0

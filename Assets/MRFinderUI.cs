@@ -198,7 +198,7 @@ public class MRFinderUI : MonoBehaviour
     {
         Debug.Log("OnReleaseItem lastState = " + lastState);
         //state = lastState;
-        UpdateStateDelayed(lastState);
+        UpdateStateDelayed(State.Viewing);
     }
 
     public void OnSearchTileSelected(int tileID)

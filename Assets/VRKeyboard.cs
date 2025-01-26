@@ -15,7 +15,7 @@ public class VRKeyboard : MonoBehaviour
 
     public bool capslock = false;
 
-    KeyboardKey[] allKeys;
+    public KeyboardKey[] allKeys;
 
     bool isListeningVoice = false;
 

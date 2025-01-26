@@ -7,6 +7,7 @@ public class KeyboardKey : MonoBehaviour
 {
     InteractableUnityEventWrapper wrapper;
     // Start is called before the first frame update
+
     void Start()
     {
         wrapper = GetComponentInChildren<InteractableUnityEventWrapper>();
@@ -53,11 +54,36 @@ public class KeyboardKey : MonoBehaviour
         else
         if (name.Contains("caps"))
         {
+            Debug.Log("Capslock pressed VRKeyboard.Instance.allKeys.Length = "+ VRKeyboard.Instance.allKeys.Length);
             VRKeyboard.Instance.capslock = !VRKeyboard.Instance.capslock;
+            for (int i = 0; i < VRKeyboard.Instance.allKeys.Length; i++)
+            {
+                VRKeyboard.Instance.allKeys[i].UpdateCapslock();
+            }
         }
         else
         {
             VRKeyboard.Instance.keyboardString += gameObject.name;
+        }
+    }
+
+    public void UpdateCapslock()
+    {
+        Debug.Log("UpdateCapslock "+ gameObject.name);
+        string alphabet = "abcdefghijklmnopqrstuvwxyz";
+        string name = gameObject.name.ToLower();
+
+        if (name.Length == 1 && alphabet.Contains(name))
+        {
+            //is a letter
+            if (VRKeyboard.Instance.capslock)
+            {
+                gameObject.name = gameObject.name.ToUpper();
+            }
+            else
+            {
+                gameObject.name = gameObject.name.ToLower();
+            }
         }
     }
 }

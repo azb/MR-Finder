@@ -2175,6 +2175,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8217829432781353616, guid: 6fea817da29c1c74abe40ee102857ceb, type: 3}
       insertIndex: 1
       addedObject: {fileID: 574383507}
+    - targetCorrespondingSourceObject: {fileID: 1326769446615698092, guid: 6fea817da29c1c74abe40ee102857ceb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866061160}
   m_SourcePrefab: {fileID: 100100000, guid: 6fea817da29c1c74abe40ee102857ceb, type: 3}
 --- !u!1 &471742183
 GameObject:
@@ -7295,6 +7298,29 @@ MonoBehaviour:
   _numLinePoints: 20
   _targetlessLength: 0.5
   _tubeRenderer: {fileID: 1844114834}
+--- !u!1 &1866061158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1326769446615698092, guid: 6fea817da29c1c74abe40ee102857ceb, type: 3}
+  m_PrefabInstance: {fileID: 466984202}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866061160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866061158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b023183069df224080314a560e6e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: f10154e0-16b2-492f-97d0-6639f69e7df6
+  instanceId: 4631f5dc-6bf4-4bb7-a700-fec25e70b58b
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
 --- !u!1 &1877959890
 GameObject:
   m_ObjectHideFlags: 0
@@ -7894,6 +7920,162 @@ MonoBehaviour:
   _fadeOut: 0
   _gradientLength: 0.85
   _glowType: 28
+--- !u!1 &2026990596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2026990600}
+  - component: {fileID: 2026990599}
+  - component: {fileID: 2026990598}
+  - component: {fileID: 2026990597}
+  m_Layer: 0
+  m_Name: '[BuildingBlock] Shared Spatial Anchor Core'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2026990597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026990596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 805b891e426e2074a99e3e98c221b432, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisableRuntimeGUIAlerts: 0
+  AlertViewHUDPrefab: {fileID: 392890655966002909, guid: 6b52d78c79420c0459b75a3dfcbb746b, type: 3}
+--- !u!114 &2026990598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026990596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77134567a6a21b6478a7b71d471b9f1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onAnchorCreateCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2026990597}
+        m_TargetAssemblyTypeName: SharedSpatialAnchorErrorHandler, Meta.XR.BuildingBlocks
+        m_MethodName: OnAnchorCreate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onAnchorsLoadCompleted:
+    m_PersistentCalls:
+      m_Calls: []
+  _onAnchorsEraseAllCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2026990597}
+        m_TargetAssemblyTypeName: SharedSpatialAnchorErrorHandler, Meta.XR.BuildingBlocks
+        m_MethodName: OnAnchorEraseAll
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onAnchorEraseCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2026990597}
+        m_TargetAssemblyTypeName: SharedSpatialAnchorErrorHandler, Meta.XR.BuildingBlocks
+        m_MethodName: OnAnchorErase
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onSpatialAnchorsShareCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2026990597}
+        m_TargetAssemblyTypeName: SharedSpatialAnchorErrorHandler, Meta.XR.BuildingBlocks
+        m_MethodName: OnAnchorShare
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onSharedSpatialAnchorsLoadCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2026990597}
+        m_TargetAssemblyTypeName: SharedSpatialAnchorErrorHandler, Meta.XR.BuildingBlocks
+        m_MethodName: OnSharedSpatialAnchorLoad
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2026990599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026990596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98d1784a0f55a9a44adf70f414591cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockId: 975428dc-db04-4e43-be4a-232f192cd3eb
+  instanceId: a3f06423-3d57-4f4f-8b47-ec7abac90537
+  version: 1
+  installationRoutineCheckpoint:
+    _installationRoutineId: 
+    _installationVariants: []
+--- !u!4 &2026990600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026990596}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2031192506
 GameObject:
   m_ObjectHideFlags: 0
@@ -8520,6 +8702,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1180637189021144412, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188708573129108400, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
+      propertyPath: _whenUnselect.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1295311405704319457, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
@@ -9364,11 +9550,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3439397166478003974, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: _size.x
-      value: 0
+      value: 1207
       objectReference: {fileID: 0}
     - target: {fileID: 3439397166478003974, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: _size.y
-      value: 0
+      value: 277.3
       objectReference: {fileID: 0}
     - target: {fileID: 3466396239116574007, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9892,11 +10078,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5504241405171089963, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: _size.x
-      value: 0
+      value: 1207
       objectReference: {fileID: 0}
     - target: {fileID: 5504241405171089963, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: _size.y
-      value: 0
+      value: 277.3
       objectReference: {fileID: 0}
     - target: {fileID: 5541174897457276059, guid: adf65b3b2e9dcdd46b6eab5fab30509d, type: 3}
       propertyPath: m_AnchorMax.y
@@ -11340,3 +11526,4 @@ SceneRoots:
   - {fileID: 1185244060}
   - {fileID: 1840218140}
   - {fileID: 1299893367}
+  - {fileID: 2026990600}

@@ -354,6 +354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalRing: {fileID: 7508395123847517672}
   selectedRing: {fileID: 973062975880574645}
+  canvas: {fileID: 471306199489305127}
   label: {fileID: 2001741403071345030}
 --- !u!1 &7069084131934932903
 GameObject:
@@ -1405,6 +1406,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3345971977458004996, guid: 0bc59880159b54a46ae23be3dc481d36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3575497011483255806, guid: 0bc59880159b54a46ae23be3dc481d36, type: 3}
       propertyPath: m_Name
       value: Item
@@ -1422,6 +1427,11 @@ PrefabInstance:
       addedObject: {fileID: 5920931110293539106}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc59880159b54a46ae23be3dc481d36, type: 3}
+--- !u!1 &471306199489305127 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3345971977458004996, guid: 0bc59880159b54a46ae23be3dc481d36, type: 3}
+  m_PrefabInstance: {fileID: 2946811786062753315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &714573385689080025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2382264572213350138, guid: 0bc59880159b54a46ae23be3dc481d36, type: 3}

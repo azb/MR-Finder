@@ -179,6 +179,7 @@ public class MRFinderUI : MonoBehaviour
             if (items[i].name.ToLower().Contains(query.ToLower()))
             {
                 arrow.objectToPointAt = items[i].transform;
+                this.selectedItem = items[i].GetComponent<Item>();
             }
         }
 

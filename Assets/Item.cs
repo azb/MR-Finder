@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
 
     public GameObject normalRing;
     public GameObject selectedRing;
+    public GameObject canvas;
 
     public Text label;
 
@@ -23,6 +24,17 @@ public class Item : MonoBehaviour
     {
         normalRing.SetActive(mrFinderUI.selectedItem != this);
         selectedRing.SetActive(mrFinderUI.selectedItem == this);
+
+        if (MRFinderUI.Instance.state == MRFinderUI.State.CompassUI)
+        {
+            normalRing.SetActive(false);
+            selectedRing.SetActive(MRFinderUI.Instance.selectedItem == this);
+            canvas.SetActive(MRFinderUI.Instance.selectedItem == this);
+        }
+        else
+        {
+            canvas.SetActive(true);
+        }
     }
 
     public void OnGrab()

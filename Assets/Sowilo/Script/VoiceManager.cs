@@ -13,6 +13,7 @@ public class VoiceManager : MonoBehaviour
     [SerializeField] private WitResponseMatcher responseMatcher;
     //[SerializeField] private TextMeshProUGUI transcriptionText;
     [SerializeField] private InputField transcriptionText;
+    [SerializeField] private Toggle micbutton;
 
     [Header("Voice Events")]
     //[SerializeField] private AmazonBedrockConnection amazonBedrockConnection;
@@ -34,6 +35,8 @@ public class VoiceManager : MonoBehaviour
         }
 
         appVoiceExperience.Activate();
+
+        //micbutton.onValueChanged.AddListener(() => appVoiceExperience.Activate());
     }
 
     private void OnDestroy()
@@ -50,7 +53,10 @@ public class VoiceManager : MonoBehaviour
         }
     }
 
+    //for button
     private void ReactivateVoice() => appVoiceExperience.Activate();
+
+    
 
     private void WakeWordDetected(string[] arg0)
     {
